@@ -714,10 +714,10 @@ $EndComp
 Wire Wire Line
 	1800 3250 1750 3250
 $Comp
-L Connector_Generic:Conn_01x01 J1
+L Connector_Generic:Conn_01x01 TP1
 U 1 1 61BF10E0
 P 3750 1100
-F 0 "J1" H 3830 1142 50  0000 L CNN
+F 0 "TP1" H 3830 1142 50  0000 L CNN
 F 1 "BOOT0" H 3830 1051 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3750 1100 50  0001 C CNN
 F 3 "~" H 3750 1100 50  0001 C CNN
@@ -727,10 +727,10 @@ $EndComp
 Text GLabel 3550 1100 0    50   Input ~ 0
 BOOT0
 $Comp
-L Connector_Generic:Conn_01x01 J7
+L Connector_Generic:Conn_01x01 TP2
 U 1 1 61BF32BB
 P 3750 1300
-F 0 "J7" H 3830 1342 50  0000 L CNN
+F 0 "TP2" H 3830 1342 50  0000 L CNN
 F 1 "BOOT1" H 3830 1251 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3750 1300 50  0001 C CNN
 F 3 "~" H 3750 1300 50  0001 C CNN
@@ -740,10 +740,10 @@ $EndComp
 Text GLabel 3550 1300 0    50   Input ~ 0
 BOOT1
 $Comp
-L Connector_Generic:Conn_01x01 J8
+L Connector_Generic:Conn_01x01 TP3
 U 1 1 61BF5138
 P 3750 1500
-F 0 "J8" H 3830 1542 50  0000 L CNN
+F 0 "TP3" H 3830 1542 50  0000 L CNN
 F 1 "GND" H 3830 1451 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3750 1500 50  0001 C CNN
 F 3 "~" H 3750 1500 50  0001 C CNN
@@ -762,10 +762,10 @@ F 3 "" H 3550 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J9
+L Connector_Generic:Conn_01x01 TP4
 U 1 1 61BF77FB
 P 4650 1100
-F 0 "J9" H 4730 1142 50  0000 L CNN
+F 0 "TP4" H 4730 1142 50  0000 L CNN
 F 1 "VCC" H 4730 1051 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4650 1100 50  0001 C CNN
 F 3 "~" H 4650 1100 50  0001 C CNN
@@ -788,10 +788,10 @@ SWDIO
 Text GLabel 3100 4450 2    50   Output ~ 0
 SWCLK
 $Comp
-L Connector_Generic:Conn_01x01 J10
+L Connector_Generic:Conn_01x01 TP5
 U 1 1 61BF3A3F
 P 4650 1300
-F 0 "J10" H 4730 1342 50  0000 L CNN
+F 0 "TP5" H 4730 1342 50  0000 L CNN
 F 1 "SWDIO" H 4730 1251 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4650 1300 50  0001 C CNN
 F 3 "~" H 4650 1300 50  0001 C CNN
@@ -801,10 +801,10 @@ $EndComp
 Text GLabel 4450 1300 0    50   Input ~ 0
 SWDIO
 $Comp
-L Connector_Generic:Conn_01x01 J11
+L Connector_Generic:Conn_01x01 TP6
 U 1 1 61BF57EE
 P 4650 1500
-F 0 "J11" H 4730 1542 50  0000 L CNN
+F 0 "TP6" H 4730 1542 50  0000 L CNN
 F 1 "SWCLK" H 4730 1451 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4650 1500 50  0001 C CNN
 F 3 "~" H 4650 1500 50  0001 C CNN

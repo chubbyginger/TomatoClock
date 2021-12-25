@@ -481,10 +481,6 @@ Text GLabel 6800 3600 0    50   Output ~ 0
 MIDDLE
 Text GLabel 6800 3700 0    50   Output ~ 0
 RIGHT
-Text GLabel 3100 3250 2    50   Output ~ 0
-BT_RXD
-Text GLabel 3100 3350 2    50   Input ~ 0
-BT_TXD
 Text GLabel 3100 3450 2    50   Input ~ 0
 LEFT
 Text GLabel 3100 3550 2    50   Input ~ 0
