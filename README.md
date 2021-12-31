@@ -24,4 +24,4 @@
 
 ### 软件方案
 
-原本所有程序都计划使用Arduino IDE开发，但是后来发现了大问题，**Arduino对STM32的支持库几乎完全是bug般的存在**，项目非常不完善，并且无法访问片内很多资源如RTC等。因此现在计划使用Keil MDK开发STM32版本，而ESP32版本将会重新使用Arduino IDE，因为Arduino对ESP32的支持是很完善的。
+原本是要用Atmel的ATmega328的8位主控的，但后来发现内存太小，因此换用了STM32，用ST官方推荐的CubeIDE开发。
