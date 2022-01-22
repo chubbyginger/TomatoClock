@@ -1,0 +1,4 @@
+oled.c:8:9:u8x8_byte_stm32f1xx_hw_i2c	40	static
+oled.c:61:6:delay_us	24	static
+oled.c:75:9:u8x8_gpio_and_delay	32	static,ignoring_inline_asm
+oled.c:117:6:u8g2Init	16	static

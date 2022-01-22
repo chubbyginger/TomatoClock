@@ -247,17 +247,6 @@ F 3 "" H 6400 1050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Power_Management:WS4518E U2
-U 1 1 61A782D4
-P 6050 2150
-F 0 "U2" H 6100 2275 50  0000 C CNN
-F 1 "WS4518E" H 6100 2184 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 6050 2150 50  0001 C CNN
-F 3 "" H 6050 2150 50  0001 C CNN
-	1    6050 2150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+BATT #PWR07
 U 1 1 61A79557
 P 5700 2350
@@ -303,8 +292,6 @@ F 3 "" H 6800 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7150 1850 7150 2350
-Wire Wire Line
-	6500 2350 7150 2350
 $Comp
 L Device:LED D1
 U 1 1 61A84720
@@ -329,8 +316,6 @@ F 3 "~" H 5550 2000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5550 2150 5550 2250
-Wire Wire Line
-	5550 2250 5700 2250
 $Comp
 L power:GND #PWR012
 U 1 1 61A878EC
@@ -504,9 +489,9 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 $EndComp
 Text GLabel 3100 3750 2    50   Output ~ 0
 US_TRIG
-Text GLabel 1800 3850 0    50   Output ~ 0
+Text GLabel 1800 3750 0    50   Output ~ 0
 SCL
-Text GLabel 1800 3950 0    50   BiDi ~ 0
+Text GLabel 1800 3850 0    50   BiDi ~ 0
 SDA
 $Comp
 L Device:Q_NPN_CBE Q1
@@ -566,16 +551,8 @@ Wire Wire Line
 	1300 3100 1300 3400
 Wire Wire Line
 	1300 3400 1000 3400
-Wire Wire Line
-	1800 3150 1350 3150
-Wire Wire Line
-	1350 3150 1350 3500
-Wire Wire Line
-	1350 3500 1000 3500
 Text GLabel 1000 3400 0    50   Input ~ 0
 US_ECHO
-Text GLabel 1000 3500 0    50   Output ~ 0
-BUZZER
 $Comp
 L Device:R R1
 U 1 1 61A5A591
@@ -809,4 +786,25 @@ F 3 "~" H 4650 1500 50  0001 C CNN
 $EndComp
 Text GLabel 4450 1500 0    50   Input ~ 0
 SWCLK
+$Comp
+L Power_Management:TP4054 U2
+U 1 1 61DF185E
+P 6050 2300
+F 0 "U2" H 6100 2575 50  0000 C CNN
+F 1 "TP4054" H 6100 2484 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 6050 2300 50  0001 C CNN
+F 3 "" H 6050 2300 50  0001 C CNN
+	1    6050 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2250 5750 2250
+Wire Wire Line
+	5700 2350 5750 2350
+Wire Wire Line
+	6500 2250 6450 2250
+Wire Wire Line
+	6450 2350 7150 2350
+Text GLabel 3100 3150 2    50   Output ~ 0
+BUZZER
 $EndSCHEMATC

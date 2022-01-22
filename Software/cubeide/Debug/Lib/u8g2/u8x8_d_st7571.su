@@ -1,0 +1,3 @@
+u8x8_d_st7571.c:83:16:u8x8_d_st7571_generic	32	static
+u8x8_d_st7571.c:242:9:u8x8_d_st7571_128x128	24	static
+u8x8_d_st7571.c:341:9:u8x8_d_st7571_128x96	24	static
