@@ -6,5 +6,4 @@ fp-info-cache
 *.o
 *.d
 *.bin
-*.map
 *.list
