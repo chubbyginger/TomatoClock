@@ -1,3 +1,10 @@
-/Software/keil-mdk/obj
-/Software/keil-mdk/listings
-/Hardware/fp-info-cache
+# KiCad cache
+fp-info-cache
+
+# Build objects
+*.elf
+*.o
+*.d
+*.bin
+*.map
+*.list
