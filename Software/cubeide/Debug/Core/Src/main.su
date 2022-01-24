@@ -1,7 +1,7 @@
 main.c:71:5:main	160	static
-main.c:125:6:SystemClock_Config	88	static
-main.c:172:13:MX_I2C1_Init	8	static
-main.c:206:13:MX_RTC_Init	16	static
-main.c:263:13:MX_TIM2_Init	64	static
-main.c:322:13:MX_GPIO_Init	40	static
-main.c:374:6:Error_Handler	4	static,ignoring_inline_asm
+main.c:126:6:SystemClock_Config	88	static
+main.c:173:13:MX_I2C1_Init	8	static
+main.c:207:13:MX_RTC_Init	16	static
+main.c:264:13:MX_TIM2_Init	64	static
+main.c:323:13:MX_GPIO_Init	40	static
+main.c:375:6:Error_Handler	4	static,ignoring_inline_asm

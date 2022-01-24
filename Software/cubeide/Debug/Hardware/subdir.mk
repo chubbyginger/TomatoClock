@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Hardware/oled.c 
+../Hardware/oled.c \
+../Hardware/rtc.c 
 
 OBJS += \
-./Hardware/oled.o 
+./Hardware/oled.o \
+./Hardware/rtc.o 
 
 C_DEPS += \
-./Hardware/oled.d 
+./Hardware/oled.d \
+./Hardware/rtc.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Hardware/%.o: ../Hardware/%.c Hardware/subdir.mk
 clean: clean-Hardware
 
 clean-Hardware:
-	-$(RM) ./Hardware/oled.d ./Hardware/oled.o
+	-$(RM) ./Hardware/oled.d ./Hardware/oled.o ./Hardware/rtc.d ./Hardware/rtc.o
 
 .PHONY: clean-Hardware
 

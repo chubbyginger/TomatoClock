@@ -22,6 +22,7 @@
 "./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
 "./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
 "./Hardware/oled.o"
+"./Hardware/rtc.o"
 "./Lib/u8g2/mui.o"
 "./Lib/u8g2/mui_u8g2.o"
 "./Lib/u8g2/u8g2_bitmap.o"

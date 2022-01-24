@@ -1,5 +1,5 @@
 /*
- * SSD1306 driver for u8g2.
+ * SSD1306 driver source for u8g2.
  * Reference: https://blog.csdn.net/weixin_44099973/article/details/107046348
  */
 
@@ -116,6 +116,8 @@ uint8_t u8x8_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *ar
 
 void u8g2Init(u8g2_t *u8g2)
 {
-    u8g2_Setup_ssd1306_i2c_128x64_noname_f(u8g2, U8G2_R0, u8x8_byte_stm32f1xx_hw_i2c, u8x8_gpio_and_delay); // 初始化 u8g2 结构体
+    u8g2_Setup_ssd1306_i2c_128x64_noname_f(u8g2, U8G2_R0, u8x8_byte_stm32f1xx_hw_i2c, u8x8_gpio_and_delay);
     u8g2_InitDisplay(u8g2);
+    u8g2_SetPowerSave(u8g2, 0);
+    u8g2_ClearBuffer(u8g2);
 }

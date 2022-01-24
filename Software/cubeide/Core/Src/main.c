@@ -80,7 +80,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  // Had better delay for some time here.
+  HAL_Delay(100);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -109,12 +110,12 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	u8g2_SetFont(&u8g2, u8g2_font_unifont_t_chinese2);
+	u8g2_SetFont(&u8g2, u8g2_font_unifont_t_latin);
 	u8g2_ClearBuffer(&u8g2);
-	u8g2_DrawUTF8(&u8g2, 0, 16, "2022/01/22");
+	u8g2_DrawStr(&u8g2, 11, 44, getTime(&hrtc));
 	u8g2_SendBuffer(&u8g2);
-    /* USER CODE BEGIN 3 */
   }
+  /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 

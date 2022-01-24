@@ -1,3 +1,7 @@
+/*
+ * SSD1306 driver header for u8g2.
+ * Reference: https://blog.csdn.net/weixin_44099973/article/details/107046348
+ */
 #ifndef __OLED_INIT_H
 #define __OLED_INIT_H
 
