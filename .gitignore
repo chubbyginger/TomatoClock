@@ -2,9 +2,11 @@
 fp-info-cache
 
 # Build objects
+/Software/cubeide/Debug/Core
+/Software/cubeide/Debug/Drivers
+/Software/cubeide/Debug/Hardware
+/Software/cubeide/Debug/Lib
 *.elf
-*.o
-*.d
-*.bin
 *.map
+*.bin
 *.list
