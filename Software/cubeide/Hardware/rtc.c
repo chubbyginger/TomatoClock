@@ -1,10 +1,8 @@
 #include "rtc.h"
 
-char* getTime(RTC_HandleTypeDef rtc)
+void getTime(RTC_HandleTypeDef rtc, char* p_timestr)
 {
 	RTC_TimeTypeDef time;
 	HAL_RTC_GetTime(&rtc, &time, RTC_FORMAT_BIN);
-	char timestr[6];
-	snprintf(timestr, sizeof(timestr), "%02u:%02u", time.Hours, time.Minutes);
-	return timestr;
+	sprintf(p_timestr, "%02u:%02u", time.Hours, time.Minutes);
 }

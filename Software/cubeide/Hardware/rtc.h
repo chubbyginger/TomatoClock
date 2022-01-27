@@ -2,6 +2,7 @@
 #define __RTC_H
 #include "main.h"
 #include <stdio.h>
-char* getTime(RTC_HandleTypeDef rtc);
+
+void getTime(RTC_HandleTypeDef rtc, char* p_timestr);
 
 #endif
