@@ -105,7 +105,8 @@ int main(void)
   u8g2_t u8g2;
   u8g2Init(&u8g2);
 
-  char timestr[6];
+  char datetimestr[15];
+  char daystr[33];
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,8 +115,11 @@ int main(void)
   {
 	u8g2_SetFont(&u8g2, u8g2_font_unifont_t_latin);
 	u8g2_ClearBuffer(&u8g2);
-	getTime(hrtc, timestr);
-	u8g2_DrawStr(&u8g2, 11, 44, timestr);
+	getDateTime(hrtc, datetimestr);
+	getDay(hrtc, daystr);
+	u8g2_DrawStr(&u8g2, 8, 11, datetimestr);
+	u8g2_SetFont(&u8g2, u8g2_font_unifont_t_chinese2);
+	u8g2_DrawUTF8(&u8g2, 0, 33, daystr);
 	u8g2_SendBuffer(&u8g2);
 	HAL_Delay(1000);
   }
@@ -138,11 +142,11 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE|RCC_OSCILLATORTYPE_LSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
@@ -164,7 +168,7 @@ void SystemClock_Config(void)
     Error_Handler();
   }
   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC;
-  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
+  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
