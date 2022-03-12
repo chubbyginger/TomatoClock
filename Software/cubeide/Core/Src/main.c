@@ -104,6 +104,8 @@ int main(void)
   // Initialize u8g2
   u8g2_t u8g2;
   u8g2Init(&u8g2);
+  u8g2_SetFont(&u8g2, u8g2_font_unifont_t_latin);
+  u8g2_DrawStr(&u8g2, 0, 12, "Loading...");
 
   char datetimestr[15];
   char daystr[33];

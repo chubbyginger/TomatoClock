@@ -31,5 +31,5 @@ void getDay(RTC_HandleTypeDef rtc, char* p_daystr)
 	RTC_DateTypeDef date;
 	HAL_RTC_GetDate(&rtc, &date, RTC_FORMAT_BIN);
 	char *days_chinese[8] = {"周一", "周二", "周三", "周四", "周五", "周六", "周日"};
-	p_daystr = days_chinese[date.WeekDay];
+	*p_daystr = days_chinese[date.WeekDay];
 }
